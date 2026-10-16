@@ -2,7 +2,7 @@
 (function(){
 'use strict';
 var D=window.QUIZ; if(!D){document.getElementById('view').innerHTML='<p class="empty">题库未加载</p>';return;}
-var KEY='junli_lvpi_quiz_v1';
+var KEY='junli_lvpi_quiz_v2';
 var TYPE={S:'单选',M:'多选',T:'判断',F:'填空'};
 var CH={};(D.chs||[]).forEach(function(c){CH[c.id]=c.title;});
 var QBY={};D.questions.forEach(function(q){QBY[q.id]=q;});
@@ -48,7 +48,7 @@ function home(){
     '<button class="tile" data-mode="chapters"><div class="ico">📂</div><b>按章节</b><span>专题一至五</span></button>'+
     '</div>'+
     '<div class="label">按题型</div><div class="chips">'+['S','M','T','F'].map(function(t){return '<button class="chip" data-ty="'+t+'">'+TYPE[t]+'（'+byT[t].tot+'）</button>';}).join('')+'</div>'+
-    '<p class="disclaimer" style="margin-top:18px">优先覆盖笔记加粗易考点与易错差异；答案以笔记正文为准，争议日期见「新旧差异」页。</p>');
+    '<p class="disclaimer" style="margin-top:18px">题库对齐徐亮《普通高校军事课教程》考点；与旧笔记冲突处以教材为准，详见「新旧差异」。</p>');
   Array.prototype.forEach.call(document.querySelectorAll('[data-mode]'),function(b){b.onclick=function(){
     var m=b.getAttribute('data-mode');
     if(m==='mix')start(shuffle(D.questions).slice(0,20),{title:'随机练习'});

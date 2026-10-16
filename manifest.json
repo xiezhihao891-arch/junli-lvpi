@@ -1,14 +1,22 @@
 {
-  "name": "军理绿皮新版",
+  "name": "军理绿皮 · 徐亮教材",
   "short_name": "军理绿皮",
-  "description": "中大军事理论绿皮教材复习 · 刷题/背诵/易错差异",
+  "description": "基于徐亮《普通高校军事课教程》ISBN978-7-306-07893-3",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f1512",
   "theme_color": "#1f5f45",
   "lang": "zh-CN",
   "icons": [
-    {"src": "icon-180.png", "sizes": "180x180", "type": "image/png"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+    {
+      "src": "icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }

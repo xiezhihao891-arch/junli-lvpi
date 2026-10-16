@@ -2,7 +2,7 @@
 (function(){
 'use strict';
 var D=window.MEMO; if(!D){document.getElementById('view').innerHTML='<p class="empty">背诵数据未加载</p>';return;}
-var KEY='junli_lvpi_memo_v1';
+var KEY='junli_lvpi_memo_v2';
 var view=document.getElementById('view');
 var mode='home', idx=0, list=[], flipped=false, reveal={};
 
@@ -27,7 +27,7 @@ function home(){
     '<button class="tile" data-m="tl"><div class="ico">📅</div><b>时间轴</b><span>点开看日期</span></button>'+
     '<button class="tile" data-m="must"><div class="ico">⭐</div><b>考前必背</b><span>易错+军种日等</span></button>'+
     '</div>'+
-    '<p class="disclaimer">卡片提炼自重点笔记；争议日期请对照「新旧差异」页与课堂。</p>');
+    '<p class="disclaimer">卡片提炼自绿皮教材考点；与詹哲轩笔记冲突见「新旧差异」。</p>');
   Array.prototype.forEach.call(document.querySelectorAll('[data-m]'),function(b){b.onclick=function(){
     var m=b.getAttribute('data-m');
     if(m==='cards')startCards(D.cards);
